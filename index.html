@@ -7,16 +7,11 @@
   	<title>Todo APP</title>
   	<!--Bootstrap-->	
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-	<!--Script-->
-  	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-  	<script src="js/bootstrap.min.js"></script>
 	<!--Css-->
   	<link rel="stylesheet" href="css/animate.css" type="text/css">  	
-  	<link rel="stylesheet" href="css/icomoon.css" type="text/css">
   	<link rel="stylesheet" href="css/queries.css" type="text/css">
   	 <link rel="stylesheet" href="css/main.css" type="text/css">
   	<!--Fonts-->
-  	<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
   	<link rel="shortcut icon" href="favicon.ico">
   	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">  
@@ -26,21 +21,35 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12 col-sm-12 col-xs-12">
-				<h3 class="text-center well">TODO APP</h3>
+				<h3 class="text-center well well-sm">TODO APP</h3>
 			</div>
 		</div>
 	</div>
 	</header>
-	<section>
+	<section class="principal">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12 col-sm-12 col-xs-12">
-				<textarea class="form-control" rows="3">Añade tu nueva tarea</textarea>
+				<textarea id="tarea" class="form-control" rows="4" placeholder="Añade tu nueva tarea"></textarea>
 				<br>
-				<button type="submit" class="btn btn-primary"><strong><i class="fa glyphicon glyphicon-plus"></i></strong>    Añadir tarea</button>
+				<button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-plus" aria-hidden="true"></i>   Añadir tarea</button>
 			</div>
 		</div>
 	</div>	
+	<br>
 	</section>
+	<section class="tareas">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<p class="well well-sm">  
+						<input class="text-left" type="checkbox"> <button class="btn btn-default text-right" type="button"><i class="glyphicon glyphicon-trash " aria-hidden="true"></i></button>
+					</p>
+				</div>
+			</div>
+		</div>		
+	</section>
+<!--Script-->
+  	<script src="js/main.js"></script>
 </body>
 </html>
