@@ -5,11 +5,10 @@
 	function createList(container,task)
 	{
 		var div=document.createElement('div');
-		div.className="list , checkbox";
-		var icon=document.createElement('i')
-		icon.className="glyphicon , glyphicon-trash, icon";
+		div.className="list , checkbox , well";
+		var icon=document.createElement('i');
+		icon.className=" fa fa-trash-o , icon , pull-right";
 		var label=document.createElement('label');
-		label.className="well, text-justify"
 		var checkbox=document.createElement('input');
 		checkbox.type="checkbox";
 		div.appendChild(label);
@@ -25,10 +24,11 @@
 	function addTask()
 	{
 		var task = document.getElementById("task");
-		if(task.value= "")
-			task.innerText = "Debe ingresar su apellido";
-		else
+		if(task.value.length == 0){
+			alert("Debe ingresar una tarea");
+		}else{
 			createList(listTask,task.value);
+		}
 
 		task.focus();
 		task.value="";
@@ -36,10 +36,7 @@
 
 	function deleteTask(evt)
 	{
-		evt.target.parentNode.classname="list , checkbox";
-		setTimeout(function (){
 			listTask.removeChild(evt.target.parentNode);
-		},2000);
 	}
 
 	function check(evt)
